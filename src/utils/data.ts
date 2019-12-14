@@ -1,7 +1,7 @@
 export type NoteDataProps = {
   id: string
   title: string
-  tags: string
+  categories: string
   content: string
   abstract?: string
   lastUpdate?: number
@@ -21,9 +21,9 @@ export const fetchNotes: () => Promise<NoteDataProps[]> = () => {
   })
 }
 
-export const createNote: (values: { title: string; tags: string; content: string }) => Promise<string> = ({
+export const createNote: (values: { title: string; categories: string; content: string }) => Promise<string> = ({
   title,
-  tags,
+  categories,
   content,
 }) => {
   const timestamp = Date.now()
@@ -36,7 +36,7 @@ export const createNote: (values: { title: string; tags: string; content: string
         notes.push({
           id: `note-${timestamp}`,
           title: title,
-          tags: tags,
+          categories: categories,
           abstract: content.slice(0, 30),
           content: content,
           lastUpdate: timestamp,
@@ -55,9 +55,9 @@ export const createNote: (values: { title: string; tags: string; content: string
 export const updateNote: (values: {
   id: string
   title?: string
-  tags?: string
+  categories?: string
   content?: string
-}) => Promise<string> = ({ id, title, tags, content }) => {
+}) => Promise<string> = ({ id, title, categories, content }) => {
   const timestamp = Date.now()
 
   return new Promise<string>((resolve, reject) => {
@@ -73,7 +73,7 @@ export const updateNote: (values: {
       notes[targetIndex] = {
         id,
         title: title || notes[targetIndex].title,
-        tags: tags || notes[targetIndex].tags,
+        categories: categories || notes[targetIndex].categories,
         content: content || notes[targetIndex].content,
         lastUpdate: timestamp,
       }
