@@ -26,15 +26,50 @@ const NoteCreationForm: React.FC<{
   // * hint:
   // * * <form ref={formRef} />
   // * * formRef.current.reset()
-  const handleSubmit = () => {}
+  const handleSubmit = () => {
+    setLoading(true)
+
+    onCreate &&
+      onCreate({
+        values: {
+          title: !!titleInputRef.current ? titleInputRef.current.value : '',
+          categories: !!categoriesInputRef.current ? categoriesInputRef.current.value : '',
+          content: !!contentTextAreaRef.current ? contentTextAreaRef.current.value : '',
+        },
+        onSuccess: () => {
+          !!formRef.current && formRef.current.reset()
+        },
+        onError: error => {
+          console.error(error)
+        },
+        onFinally: () => {
+          setLoading(false)
+        },
+      })
+  }
 
   // TODO: 4-1 implement structures of note creation form
   // * hint: React Bootstrap Forms
   // * <Form /> <Form.Group />, <Form.Label />, <Form.Control />
   return (
-    <Form>
+    <Form ref={formRef}>
+      <Form.Group>
+        <Form.Label>Title</Form.Label>
+        <Form.Control ref={titleInputRef} placeholder="title" />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Category</Form.Label>
+        <Form.Control ref={categoriesInputRef} placeholder="category" />
+      </Form.Group>
+
+      <Form.Group>
+        <Form.Label>Content</Form.Label>
+        <Form.Control ref={contentTextAreaRef} placeholder="content" as="textarea" rows={5} />
+      </Form.Group>
+
       <div className="text-right">
-        <Button variant="primary" disabled={loading}>
+        <Button variant="primary" disabled={loading} onClick={() => handleSubmit()}>
           {loading ? <i className="fas fa-spinner fa-pulse" /> : 'Create'}
         </Button>
       </div>
