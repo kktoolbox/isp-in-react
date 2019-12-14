@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/isp-in-react/static/css/main.abc53c5a.chunk.css",
-    "main.js": "/isp-in-react/static/js/main.9a562696.chunk.js",
-    "main.js.map": "/isp-in-react/static/js/main.9a562696.chunk.js.map",
+    "main.js": "/isp-in-react/static/js/main.6cef7dac.chunk.js",
+    "main.js.map": "/isp-in-react/static/js/main.6cef7dac.chunk.js.map",
     "runtime-main.js": "/isp-in-react/static/js/runtime-main.3937e3d4.js",
     "runtime-main.js.map": "/isp-in-react/static/js/runtime-main.3937e3d4.js.map",
-    "static/js/2.67e2f5b1.chunk.js": "/isp-in-react/static/js/2.67e2f5b1.chunk.js",
-    "static/js/2.67e2f5b1.chunk.js.map": "/isp-in-react/static/js/2.67e2f5b1.chunk.js.map",
+    "static/js/2.885bc01a.chunk.js": "/isp-in-react/static/js/2.885bc01a.chunk.js",
+    "static/js/2.885bc01a.chunk.js.map": "/isp-in-react/static/js/2.885bc01a.chunk.js.map",
     "index.html": "/isp-in-react/index.html",
-    "precache-manifest.160d71a0b7490fc2f9ef8a20ee6ac6a4.js": "/isp-in-react/precache-manifest.160d71a0b7490fc2f9ef8a20ee6ac6a4.js",
+    "precache-manifest.39055d981a41f7bcedfb884b4fb12957.js": "/isp-in-react/precache-manifest.39055d981a41f7bcedfb884b4fb12957.js",
     "service-worker.js": "/isp-in-react/service-worker.js",
     "static/css/main.abc53c5a.chunk.css.map": "/isp-in-react/static/css/main.abc53c5a.chunk.css.map",
-    "static/js/2.67e2f5b1.chunk.js.LICENSE": "/isp-in-react/static/js/2.67e2f5b1.chunk.js.LICENSE"
+    "static/js/2.885bc01a.chunk.js.LICENSE": "/isp-in-react/static/js/2.885bc01a.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.3937e3d4.js",
-    "static/js/2.67e2f5b1.chunk.js",
+    "static/js/2.885bc01a.chunk.js",
     "static/css/main.abc53c5a.chunk.css",
-    "static/js/main.9a562696.chunk.js"
+    "static/js/main.6cef7dac.chunk.js"
   ]
 }
